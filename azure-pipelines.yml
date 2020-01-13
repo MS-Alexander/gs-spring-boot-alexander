@@ -22,6 +22,6 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(agent.builddirectory)/target'
+    SourceFolder: '$(agent.builddirectory)'
     Contents: '**'
     TargetFolder: '$(build.artifactstagingdirectory)'
