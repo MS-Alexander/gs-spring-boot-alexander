@@ -30,3 +30,9 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'Jar file'
     publishLocation: 'Container'
+- task: Docker@2
+  inputs:
+        containerRegistry: 'Container repo'
+        repository: 'springhello'
+        command: 'buildAndPush'
+        Dockerfile: 'complete/Dockerfile'
